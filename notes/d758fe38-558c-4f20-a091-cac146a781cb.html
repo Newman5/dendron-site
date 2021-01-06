@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  <title>Working with Links - Dendron</title>
+  
+
+  <link
+    rel="shortcut icon"
+    href="https://dendron.so/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="stylesheet"
+    href="https://dendron.so/assets/css/just-the-docs-default.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous"
+  />
+
+  
+  <script
+    type="text/javascript"
+    src="https://dendron.so/assets/js/vendor/lunr.min.js"
+  ></script>
+  
+  <script
+    type="text/javascript"
+    src="https://dendron.so/assets/js/just-the-docs.js"
+  ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+  
+<meta name="description" content="Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size.">
+<meta name="author" content="dendronhq">
+
+<link rel="canonical" href="https://dendron.so/notes/d758fe38-558c-4f20-a091-cac146a781cb.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dendron.so/notes/d758fe38-558c-4f20-a091-cac146a781cb.html">
+<meta property="og:description" content="Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size.">
+<meta property="og:image" content="https://dendron.so/logo.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@dendronhq">
+<meta name="twitter:url" content="https://dendron.so/notes/d758fe38-558c-4f20-a091-cac146a781cb.html">
+<meta name="twitter:description" content="Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size.">
+<meta name="twitter:image" content="https://dendron.so/logo.png">
+
+
+  <meta property="og:title" content="Working with Links - Dendron" />
+  <meta name="twitter:title" content="Working with Links - Dendron" />
+</head>
+
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="svg-link" viewBox="0 0 24 24">
+        <title>Link</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+      </symbol>
+      <symbol id="svg-search" viewBox="0 0 24 24">
+        <title>Search</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+          <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </symbol>
+      <symbol id="svg-menu" viewBox="0 0 24 24">
+        <title>Menu</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+          <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </symbol>
+      <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+        <title>Expand</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </symbol>
+      <symbol id="svg-doc" viewBox="0 0 24 24">
+        <title>Document</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+          <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+        </svg>
+      </symbol>
+    </svg>
+  
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="https://dendron.so" class="site-title lh-tight">
+  <div class="site-logo"></div>
+
+ </a>
+        <a href="#" id="menu-button" class="site-button">
+          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+        </a>
+      </div>
+
+      <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      </nav>
+      <footer class="site-footer">
+        🌱 with 💕 using <a href="https://www.dendron.so/"> Dendron 🌲 </a>
+      </footer>
+    </div>
+    <div class="main" id="top">
+        <div id="main-header" class="main-header">
+          
+            <div class="search">
+              <div class="search-input-wrap">
+                <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Dendron" aria-label="Search Dendron" autocomplete="off">
+                <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+              </div>
+              <div id="search-results" class="search-results"></div>
+            </div>
+          
+          
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://dendron.so">Dendron</a></li><li class="breadcrumb-nav-list-item"><a href="https://dendron.so/notes/678c77d9-ef2c-4537-97b5-64556d6337f1.html">Tutorial</a></li><li class="breadcrumb-nav-list-item">Working with Links</li></ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+
+        
+  
+        
+
+        
+
+<div id="main" role="main">
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Working with Links">
+    
+    <meta itemprop="datePublished" content="2020-12-15T18:08:51+00:00">
+    <meta itemprop="dateModified" content="2020-12-15T18:50:25+00:00">
+
+    <div class="page__inner-wrap">
+      
+      
+
+      <section class="page__content" itemprop="text">
+
+        
+
+        <h2 id="working-with-links"><a aria-hidden="true" class="anchor-heading" href="#working-with-links"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Working with Links</h2>
+<h3 id="creating-a-link"><a aria-hidden="true" class="anchor-heading" href="#creating-a-link"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Creating a link</h3>
+<p>Create a new note using lookup called <code>onboarding</code>. Type in the following under the frontmatter.</p>
+<pre><code>Read up on `[[`
+</code></pre>
+<p>The <code>[[</code> tells Dendron that you are about to create a link. Dendron will auto-complete with a matching set of closing brackets <code>]]</code> as well as give you a list of completions of existing notes.</p>
+<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/quickstart.completion.jpg"></p>
+<p>We are going to create a new note instead of linking to an existing note. So type <code>pro.skynet</code> as your link. <code>pro</code> is short of <code>project</code> in this case. </p>
+<pre><code>Read up on [[pro.skynet]]
+</code></pre>
+<h3 id="creating-a-note-with-a-link"><a aria-hidden="true" class="anchor-heading" href="#creating-a-note-with-a-link"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Creating a note (with a link)</h3>
+<p>With your cursor somewhere inside <code>[[pro.skynet]]</code>, hit <code>F12</code>. This will create the <code>pro.skynet</code> note. Just like with lookup, Dendron automatically creates notes to links that don't exist when you navigate to them. </p>
+<p>You can switch back to the previous note by pressing <code>CTRL-Tab</code></p>
+<h3 id="adding-a-link-alias"><a aria-hidden="true" class="anchor-heading" href="#adding-a-link-alias"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Adding a link alias</h3>
+<p>You can add an alternative title to the link by creating an alias. For example, add <code>the project|</code> to your link to change the name in the preview, (If you've closed your preview, you can open it using <code>CMD+SHIFT+P</code> or <code>WINDOWS+SHIFT+P</code>).</p>
+<pre><code>Read up on [[the project|pro.skynet]]
+</code></pre>
+<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/quickstart.alias.jpg"></p>
+<h3 id="navigating-links"><a aria-hidden="true" class="anchor-heading" href="#navigating-links"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Navigating links</h3>
+<p>To go back to the previous page, you can either use <code>CTRL-TAB</code>, hit <code>F12</code> over the link, click the link on the preview, or click the link inside the note while holding down the <code>option</code> or <code>ctrl</code> key (operating system dependent). You have lots of ways to navigate links in Dendron. </p>
+<h3 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h3>
+<p>When your back on <code>pro.skynet</code>, open the backlinks panel on the bottom left section of your sidebar. The backlinks panel shows you all notes with links that point to the current note. This is useful for helping to establish context.</p>
+<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/quickstart.backlinks.jpg"></p>
+<h3 id="note-references"><a aria-hidden="true" class="anchor-heading" href="#note-references"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Note References</h3>
+<p>Create <code>[[pro.skynet.principals]]</code> inside <code>pro.skynet</code> and navigate to it by using <code>F12</code>. In this new note, write the principles for skynet. </p>
+<pre><code>1. Help humans do more
+2. Be nice to humans
+3. Don't overthrow humanity
+</code></pre>
+<p>While its nice to have principals in its own section, it's something you might want to include in the main project note. To embed a note into another note, Dendron uses <a href="https://dendron.so/notes/f1af56bb-db27-47ae-8406-61a98de6c78c.html">note references</a>. You can create a note reference by using <code>CMD|CTRL+SHIFT+R</code> while inside a note. Go ahead and do that now and use <code>CTRL-TAB</code> to switch back to <code>pro.skynet</code>. Now paste the reference. You should have a screen like the one below.</p>
+<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/quickstart.refs.jpg"></p>
+<p>At this point, you can delete your original link (<code>[[pro.skynet.principal]]</code>)</p>
+<h3 id="note-references-continued"><a aria-hidden="true" class="anchor-heading" href="#note-references-continued"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Note References (continued)</h3>
+<p>Note references are extremely powerful and help you re-use your notes in a variety of places. To demonstrate, go back to the <code>pro.skynet.principals</code> and make the following modifications to the text.</p>
+<pre><code>## Help humans do more
+
+Skynet should help humans be the best human they can be. Skynet will do this using ultrasophisticated AI to help humans realize their true potential.
+
+## Be nice to humans
+
+Skynet should know that humans are delicate organic lifeforms and treat them as such. Skynet should not hurt their fragile egos or make humans feel bad.
+
+## Don't overthrow humanity
+
+Skynet should not launch nuclear missles or send robots from the future to come back to the past and wipe out humanity. 
+</code></pre>
+<p>Now highlight the first header and use <code>CMD|CTRL+SHIFT+R</code> to create another note reference.</p>
+<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/quickstart.refs-2-copy.jpg"></p>
+<p>Go back to <code>pro.skynet</code> and add paste your newly created reference. You should end up with the following screen. </p>
+<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/quickstart.refs-2-copy-res.jpg"></p>
+<p>A few things to note here</p>
+<ul>
+<li>notice how the original reference updated with the text of the note. </li>
+<li>notice that the newly created reference only has the contents from the newly created header</li>
+<li>notice that the newly created reference doesn't show the actual header itself (you can change this behavior by removing the <code>,1</code> inside the reference)</li>
+</ul>
+<p>Note references are incredibly powerful. You can do additional things like enter a range of headers to do a reference of, include a reference within a reference, and even reference multiple pages using a wildcard pattern. You can see detailed examples of all these functions in the <a href="https://dendron.so/notes/f1af56bb-db27-47ae-8406-61a98de6c78c.html">docs</a>.</p>
+<h3 id="relative-links"><a aria-hidden="true" class="anchor-heading" href="#relative-links"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Relative Links</h3>
+<p>Sometimes, you don't want to embed a note but just link to a particular section of a given note. You can do that with Dendron relative links. The syntax to do so is <code>[[{link-name}#{link-header}]]</code>. Dendron will create a relative link automatically if you select the header and use <code>CMD|CTRL+SHIFT+C</code> to create a link (if you don't have a header selected, Dendron will create a regular link to the whole page). When you navigate to a regular link, Dendron will scroll to that specific section of the page.</p>
+<ul>
+<li>NOTE: relative links are currently not supported in the preview</li>
+</ul>
+<h3 id="link-previews"><a aria-hidden="true" class="anchor-heading" href="#link-previews"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Link Previews</h3>
+<p>Something to point out is that you can preview a link by using your mouse to hover over it. This even works for note references. </p>
+<p><img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/quickstart.links-preview.jpg"></p>
+<h3 id="non-markdown-links"><a aria-hidden="true" class="anchor-heading" href="#non-markdown-links"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Non-Markdown Links</h3>
+<p></p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.links</span></div>
+<a href="https://dendron.so/notes/3472226a-ff3c-432d-bf5d-10926f39f6c2.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>
+<p>For links to a file format Dendron does not support, you can use the highlight the link and use <code>> Dendron: Open Link</code> to open the file using your operating system default for that file. This also applies to opening paths to folders.</p>
+<p><a href="https://www.loom.com/share/01250485e20a4cdca2a053dd6047ac68"><img src="https://cdn.loom.com/sessions/thumbnails/01250485e20a4cdca2a053dd6047ac68-with-play.gif"> </a></p>
+</div>    
+</div><p></p><p></p><span id="navId" data="d758fe38-558c-4f20-a091-cac146a781cb"></span>
+
+
+
+                
+      </section>
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+        
+          <hr>
+          <footer>
+            
+            
+
+            
+              <div class="d-flex mt-2">
+                
+                
+                  <p class="text-small text-grey-dk-000 mb-0">
+                    <a href="https://github.com/dendronhq/dendron-site/edit/master/vault/dendron.tutorial.links.md" id="edit-this-page">Edit this page on GitHub</a>
+                  </p>
+                
+              </div>
+            
+          </footer>
+        
+    </div>
+</div>
+
+
+  
+
+  <div class="search-overlay"></div>
+
+</div>
+</body>
+</html>

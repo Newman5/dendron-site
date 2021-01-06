@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  <title>2020-11-01 Release Notes - Dendron</title>
+  
+
+  <link
+    rel="shortcut icon"
+    href="https://dendron.so/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="stylesheet"
+    href="https://dendron.so/assets/css/just-the-docs-default.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous"
+  />
+
+  
+  <script
+    type="text/javascript"
+    src="https://dendron.so/assets/js/vendor/lunr.min.js"
+  ></script>
+  
+  <script
+    type="text/javascript"
+    src="https://dendron.so/assets/js/just-the-docs.js"
+  ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+  
+<meta name="description" content="Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size.">
+<meta name="author" content="dendronhq">
+
+<link rel="canonical" href="https://dendron.so/notes/98ad9b6b-53f3-4883-939e-e14055f2cac7.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dendron.so/notes/98ad9b6b-53f3-4883-939e-e14055f2cac7.html">
+<meta property="og:description" content="Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size.">
+<meta property="og:image" content="https://dendron.so/logo.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@dendronhq">
+<meta name="twitter:url" content="https://dendron.so/notes/98ad9b6b-53f3-4883-939e-e14055f2cac7.html">
+<meta name="twitter:description" content="Dendron is a local-first, markdown based, hierarchical note taking tool. It is meant to help you create, organize, and collaborate on knowledge bases of any size.">
+<meta name="twitter:image" content="https://dendron.so/logo.png">
+
+
+  <meta property="og:title" content="2020-11-01 Release Notes - Dendron" />
+  <meta name="twitter:title" content="2020-11-01 Release Notes - Dendron" />
+</head>
+
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="svg-link" viewBox="0 0 24 24">
+        <title>Link</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+      </symbol>
+      <symbol id="svg-search" viewBox="0 0 24 24">
+        <title>Search</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+          <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </symbol>
+      <symbol id="svg-menu" viewBox="0 0 24 24">
+        <title>Menu</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+          <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </symbol>
+      <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+        <title>Expand</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </symbol>
+      <symbol id="svg-doc" viewBox="0 0 24 24">
+        <title>Document</title>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+          <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+        </svg>
+      </symbol>
+    </svg>
+  
+    <div class="side-bar">
+      <div class="site-header">
+        <a href="https://dendron.so" class="site-title lh-tight">
+  <div class="site-logo"></div>
+
+ </a>
+        <a href="#" id="menu-button" class="site-button">
+          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+        </a>
+      </div>
+
+      <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      </nav>
+      <footer class="site-footer">
+        🌱 with 💕 using <a href="https://www.dendron.so/"> Dendron 🌲 </a>
+      </footer>
+    </div>
+    <div class="main" id="top">
+        <div id="main-header" class="main-header">
+          
+            <div class="search">
+              <div class="search-input-wrap">
+                <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Dendron" aria-label="Search Dendron" autocomplete="off">
+                <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+              </div>
+              <div id="search-results" class="search-results"></div>
+            </div>
+          
+          
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://dendron.so">Dendron</a></li><li class="breadcrumb-nav-list-item"><a href="https://dendron.so/notes/932534e7-e788-4fdb-bc8c-eaf761992a8d.html">Releases</a></li><li class="breadcrumb-nav-list-item">2020-11-01 Release Notes</li></ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+
+        
+  
+        
+
+        
+
+<div id="main" role="main">
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="2020-11-01 Release Notes">
+    
+    <meta itemprop="datePublished" content="2020-11-01T14:37:55+00:00">
+    <meta itemprop="dateModified" content="2020-11-01T16:43:11+00:00">
+
+    <div class="page__inner-wrap">
+      
+      
+
+      <section class="page__content" itemprop="text">
+
+        
+
+        <h1 id="2020-11-01-release-notes-version-014"><a aria-hidden="true" class="anchor-heading" href="#2020-11-01-release-notes-version-014"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>2020-11-01 Release Notes (version 0.14)</h1>
+<p>Dendron 0.14 is here 🌱</p>
+<p>At 14, Dendron might not yet be old enough to vote (if you are old enough and in the USA, please do that next week) but it is coming out of <strong>preview</strong> 🥳</p>
+<p>Concretely, this means a few things:</p>
+<ol>
+<li>Dendron is announcing our <strong><a href="https://accounts.dendron.so/account/subscribe">Environmentalist</a></strong> plan, a 100% optional monthly subscription for users who like to support us financially</li>
+<li>Dendron will now commit to a regular release cycle. New releases will go out at the beginning of every week. <strong>Environmentalist</strong> will get access to early builds and features every few days. </li>
+<li>Dendron will have a deprecation policy for all non-experimental (🚧) features. Any potentially breaking changes will first be deprecated and users will have at least a week's notice before a breaking change is made. </li>
+<li>Dendron is dropping the preview label
+<img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/preview.png"></li>
+</ol>
+<p>As part of getting out of preview, we are launching on <a href="https://www.producthunt.com/posts/dendron">Product Hunt</a>, a popular online catalogue for new products. If Dendron has been helpful in your life, we would appreciate it 🙏 if you could leave us some comments there. This will help new people discover our community!</p>
+<p><a href="https://www.producthunt.com/posts/dendron?utm_source=badge-featured&#x26;utm_medium=badge&#x26;utm_souce=badge-dendron" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=273037&#x26;theme=light" alt="Dendron - A better way to know | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54"></a></p>
+<h3 id="highlights"><a aria-hidden="true" class="anchor-heading" href="#highlights"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Highlights</h3>
+<ul>
+<li>complete <a href="https://dendron.so/notes/725d99be-fadd-4464-88c3-0a5fcc7292c7.html">server migration</a> for all users</li>
+<li>create <a href="https://dendron.so/notes/4473581a-cfdf-4d98-89a9-2955b308b669.html">snapshots</a> of your vault and restore them back to a specific point in time</li>
+<li>introduce <a href="https://accounts.dendron.so/account/subscribe">Environmentalist Plans</a> for folks that want to support Dendron financially</li>
+<li>add <a href="https://dendron.so/notes/66727a39-d0a7-449b-a10d-f6c438185d7f.html#publish">publishing</a> capability to pods (with ability to publish to json and regular markdown)</li>
+<li>support creating generated <a href="https://dendron.so/notes/ffa6a4ba-5eda-48c7-add5-8e2333ba27b4.html#toc">table of contents</a> when publishing</li>
+<li>realtime schema validation when saving</li>
+<li>numerous enhancements </li>
+<li>numerous bug fixes </li>
+<li>better handling of errors and failures </li>
+</ul>
+<h3 id="community"><a aria-hidden="true" class="anchor-heading" href="#community"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Community</h3>
+<ul>
+<li>
+<p>new roles</p>
+<ul>
+<li>
+<p>introduce the <strong>Environmentalist</strong> role, created for folks that are keeping Dendron sustainable through a monthly contribution</p>
+<ul>
+<li>Britt Selvitelle (@britt#3020)</li>
+<li>Tom Diaz (@TomD#7339)</li>
+<li>Kiran Pathakota (@kpats#8761)</li>
+<li>Cristian Caratti (@ccaratti#2465)</li>
+<li>Ken Sonoda (@ksoda#9504)</li>
+<li>Adam Howard (@A Howard#8010)</li>
+<li>Ladd Hoffmab (@Bassmann#5300)</li>
+<li>Fayçal MITIDJI (@bsqrd#9701)</li>
+<li>Tyler Nieman (@tsnieman#6157)</li>
+<li>Ilana Lin (@ilana#7242)</li>
+<li>Luke Roslanowski (@lukecarrier#2081)</li>
+<li>Huw Millar </li>
+<li>Martin Stemplinger</li>
+</ul>
+</li>
+<li>
+<p>introducing the <strong>Horticulturalist</strong> role, created for folks who have contributed to the Dendron code base</p>
+<ul>
+<li>Britt Selvitelle (@britt#3020)</li>
+<li>Luke Roslanowski (@lukecarrier#2081)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>we now have a new <a href="https://dendron.so/notes/6f4cd441-f883-4e75-871b-b7f93895c91b.html">community</a> section on our website that highlights the work and roles of our members</p>
+</li>
+</ul>
+<h3 id="house-keeping"><a aria-hidden="true" class="anchor-heading" href="#house-keeping"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>House Keeping</h3>
+<ul>
+<li><code>dendron.noServerMode</code> setting has been removed</li>
+<li>Dendron docs has been re-organized to be less overwhelming (if you have an links bookmarked, they will still all work because of Dendron's <a href="https://dendron.so/notes/5fcb8564-7209-4a80-9bb8-025bc8eb489b.html#permanent-ids">permanent links</a>)</li>
+</ul>
+<h3 id="upcoming"><a aria-hidden="true" class="anchor-heading" href="#upcoming"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Upcoming</h3>
+<ul>
+<li>Dendron office hours: this will be additional slots you can book outside of the initial onboarding to go over specific workflows. More details and schedule to follow in next week's release! </li>
+<li>Dendron <a href="https://dendron.so/notes/45cfb9f2-46cf-4f67-a41e-834818fbd06e.html">Multi Vault Support</a></li>
+<li>Better migration workflows from other tools into Dendron</li>
+</ul>
+<h3 id="thanks"><a aria-hidden="true" class="anchor-heading" href="#thanks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Thanks</h3>
+<p>Last and most of all, a big <strong>thanks</strong> to the following gardeners that brought up issues, contributions, and fixes to this release.</p>
+<ul>
+<li><a href="https://github.com/bs">Britt</a></li>
+</ul>
+<h3 id="changelog"><a aria-hidden="true" class="anchor-heading" href="#changelog"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Changelog</h3>
+<p></p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.release.changelog</span></div>
+<a href="https://dendron.so/notes/9bc92432-a24c-492b-b831-4d5378c1692b.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>
+<h2 id="136"><a aria-hidden="true" class="anchor-heading" href="#136"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>13.6</h2>
+<h3 id="features"><a aria-hidden="true" class="anchor-heading" href="#features"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Features</h3>
+<h4 id="add-contribute-command"><a aria-hidden="true" class="anchor-heading" href="#add-contribute-command"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Add Contribute Command</h4>
+<ul>
+<li><strong>workbench:</strong> (<a href="https://github.com/dendronhq/dendron/commit/130a58a62cc40eb4178afac554f8f4ff30c93055">130a58a</a>)</li>
+</ul>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.commands</span></div>
+<a href="https://dendron.so/notes/eea2b078-1acc-4071-a14e-18299fc28f47.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<h3 id="contribute"><a aria-hidden="true" class="anchor-heading" href="#contribute"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Contribute</h3>
+<ul>
+<li>shortcuts: none</li>
+</ul>
+<p>Become an environmentalist and keep Dendron sustainable</p>
+<p> This command takes you to Dendron's <a href="https://accounts.dendron.so/account/subscribe">Environmentalist</a> plans.
+Environmentalists are users that can support Dendron financially through a monthly contribution. Environmentalist get access to insider builds, priority support, and access to exclusive dev channels. </p>
+<hr>
+</div>    
+</div>
+<h4 id="add-snapshot-capability-to-dendron"><a aria-hidden="true" class="anchor-heading" href="#add-snapshot-capability-to-dendron"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Add Snapshot Capability to Dendron</h4>
+<ul>
+<li><strong>workbench:</strong>  (<a href="https://github.com/dendronhq/dendron/commit/3af64b701d47ed28818d7e6017c758f63be617f0">3af64b7</a>)</li>
+</ul>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.capabilities.snapshot</span></div>
+<a href="https://dendron.so/notes/4473581a-cfdf-4d98-89a9-2955b308b669.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<h1 id="snapshots"><a aria-hidden="true" class="anchor-heading" href="#snapshots"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Snapshots</h1>
+<p>You can make a snapshot of your entire vault using the <code>Snapshot Vault</code> Command. </p>
+<p>This will save all your vaults into <code>snapshots/{current_timestamp}</code></p>
+</div>    
+</div>
+<h2 id="0135-2020-10-28"><a aria-hidden="true" class="anchor-heading" href="#0135-2020-10-28"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://github.com/dendronhq/dendron/compare/v0.13.4...v0.13.5">0.13.5</a> (2020-10-28)</h2>
+<h3 id="bug-fixes"><a aria-hidden="true" class="anchor-heading" href="#bug-fixes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bug Fixes</h3>
+<ul>
+<li><strong>workbench:</strong> tree view can delete notes with caps (<a href="https://github.com/dendronhq/dendron/commit/d37926d7f38d784f847a4c2a58fb75ba7c03b0e0">d37926d</a>)</li>
+</ul>
+<h2 id="0134-2020-10-28"><a aria-hidden="true" class="anchor-heading" href="#0134-2020-10-28"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://github.com/dendronhq/dendron/compare/v0.13.4-alpha.1...v0.13.4">0.13.4</a> (2020-10-28)</h2>
+<h3 id="features-1"><a aria-hidden="true" class="anchor-heading" href="#features-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Features</h3>
+<h4 id="migrate-existing-workspaces-to-server-mode"><a aria-hidden="true" class="anchor-heading" href="#migrate-existing-workspaces-to-server-mode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Migrate Existing Workspaces to Server Mode</h4>
+<ul>
+<li>commit (<a href="https://github.com/dendronhq/dendron/commit/d19b6ecb97fb60d8706e14f0181795113b5e108b">d19b6ec</a>)</li>
+</ul>
+<p>This is the last phase in Dendron's server mode migration. All new workspaces are already running in server mode as well as well as users that have opted into it. This update transparently migrates remaining workspaces to server mode. </p>
+<p>As a reminder, <a href="https://dendron.so/notes/725d99be-fadd-4464-88c3-0a5fcc7292c7.html">server mode</a> is a re-architecture of Dendron that enables both better performance and a vast array of new features. </p>
+<p>Finally, we do have an escape valve in things something goes terribly wrong. You can set the following option to revert server mode behavior. If you end up using this, please also cut as <a href="https://github.com/dendronhq/dendron/issues/new?assignees=&#x26;labels=&#x26;template=bug_report.md&#x26;title=">a ticket</a> or a message in <a href="https://discord.gg/QbKsNx">discord</a>. </p>
+<h3 id="enhancements"><a aria-hidden="true" class="anchor-heading" href="#enhancements"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Enhancements</h3>
+<ul>
+<li>
+<p><strong>notes:</strong> selection2link will auto generate a title based on the selection (<a href="https://github.com/dendronhq/dendron/commit/9964339138bde18dc022fdd62ce9ba9d529cfa2b">9964339</a>)</p>
+</li>
+<li>
+<p><strong>workbench:</strong> graceful failure on bad schema (<a href="https://github.com/dendronhq/dendron/commit/4db5064e4eef61d9c95b9abe34f2dec41550bd9d">4db5064</a>)</p>
+<ul>
+<li>instead of refusing to initialize, Dendron will skip bad schemas and generate an error report post-startup</li>
+</ul>
+</li>
+<li>
+<p><strong>workbench:</strong> nicer error messages  (<a href="https://github.com/dendronhq/dendron/commit/9e371e132b565ae2abebaa2bf1307a5a03a91b9b">9e371e1</a>)</p>
+<ul>
+<li>certain errors now have human friendly messages instead of JSON goop</li>
+</ul>
+</li>
+</ul>
+<h3 id="bug-fixes-1"><a aria-hidden="true" class="anchor-heading" href="#bug-fixes-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bug Fixes</h3>
+<ul>
+<li><strong>workbench:</strong> read json config with comments (<a href="https://github.com/dendronhq/dendron/commit/1741553695b1c7cced54bf04b26700076a38a19c">1741553</a>)
+<ul>
+<li>Dendron gets sad if your workspace has comments</li>
+</ul>
+</li>
+</ul>
+<h3 id="community-1"><a aria-hidden="true" class="anchor-heading" href="#community-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Community</h3>
+<h4 id="horticulturalist"><a aria-hidden="true" class="anchor-heading" href="#horticulturalist"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Horticulturalist</h4>
+<p>Dendron now has a new role -> the <strong>Horticulturalist</strong>. These are folks who have contributed to the Dendron code base: 👨‍🌾👩‍🌾</p>
+<p>Kudos to <strong>@britt#3020</strong> and <strong>@lukecarrier#2081</strong> for being the first to earn this distinction!</p>
+<h4 id="dendrologist"><a aria-hidden="true" class="anchor-heading" href="#dendrologist"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Dendrologist</h4>
+<p>Excited to welcome a new dendrologist --> @I'm a lightbulb#6986 </p>
+<p>@I'm a lightbulb#6986 was one of our earliest users and one of the first to <a href="https://dendron.so/notes/3a82c5ff-7945-46ae-8bf9-3b2275fc6642.html#jacks-page">publish</a> using dendron. </p>
+<p>As a reminder, dendrologist are active members of the community who are recognized with said title and a few additional discord super powers. </p>
+<h2 id="0133-2020-10-24"><a aria-hidden="true" class="anchor-heading" href="#0133-2020-10-24"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://github.com/dendronhq/dendron/compare/v0.13.3-alpha.1...v0.13.3">0.13.3</a> (2020-10-24)</h2>
+<h3 id="features-2"><a aria-hidden="true" class="anchor-heading" href="#features-2"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Features</h3>
+<h4 id="direct-child-filter"><a aria-hidden="true" class="anchor-heading" href="#direct-child-filter"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Direct Child Filter</h4>
+<ul>
+<li><strong>lookup:</strong> support direct child filter (<a href="https://github.com/dendronhq/dendron/commit/1cae08294baa844c0c0ee3c8d390e337bd6172be">1cae082</a>)</li>
+</ul>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.lookup</span></div>
+<a href="https://dendron.so/notes/a7c3a810-28c8-4b47-96a6-8156b1524af3.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<p>Start anchor ${anchorStart} not found</p>
+</div>    
+</div>
+<ul>
+<li>
+<p>you can create a keyboard shortcut to do a lookup with the direct child filter pre-selected</p>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.lookup.modifiers</span></div>
+<a href="https://dendron.so/notes/ad270a7d-2aed-4273-8319-eb6536e38b29.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<h2 id="filtertype"><a aria-hidden="true" class="anchor-heading" href="#filtertype"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>filterType</h2>
+<p>Filter notes that show up during lookup</p>
+</div>    
+</div>
+</li>
+</ul>
+<h3 id="enhancements-1"><a aria-hidden="true" class="anchor-heading" href="#enhancements-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Enhancements</h3>
+<ul>
+<li>
+<p><strong>publish:</strong> be able to set config for all hierarchies (<a href="https://github.com/dendronhq/dendron/commit/a27d94a3c469a4efaf2ee8c2bca40a8a471773f2">a27d94a</a>)</p>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.publishing.configuration</span></div>
+<a href="https://dendron.so/notes/ffa6a4ba-5eda-48c7-add5-8e2333ba27b4.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<h4 id="config"><a aria-hidden="true" class="anchor-heading" href="#config"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>config</h4>
+<p>Per hierarchy specific config. To set options for <strong>all</strong> hierarchies, set <code>{hiearchy name}</code> to <strong>root</strong>.</p>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">config</span><span class="token punctuation">:</span>
+  <span class="token punctuation">{</span>hierarchy name<span class="token punctuation">}</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>hierarchy options<span class="token punctuation">}</span>
+</code></pre>
+<p>The list of possible options:</p>
+<ul>
+<li><strong>publishByDefault</strong>: boolean, default: true
+<ul>
+<li>if set to false, dendron will only publish notes within the hierarchy that have <code>published: true</code> set in the frontmatter</li>
+</ul>
+</li>
+<li><strong>noindexByDefault</strong>: boolean, default: false
+<ul>
+<li>if set to true, dendron will add the following meta tag <code>&#x3C;meta name="robots" content="noindex, nofollow”></code> which will tell google to not index your page</li>
+<li>when google indexes a page, it will penalize sites that have duplicate content from other sites. this is useful if you are using your hiearchy as a <a href="https://dendron.so/notes/3e7baac6-f120-4378-a667-92e7a0869dca.html">cache</a></li>
+</ul>
+</li>
+<li><strong>customFrontmatter</strong>: list, default: []
+<ul>
+<li>if set, dendron will add the specified frontmatter to each published note in the hierarchy. note that this will override existing keys with the same name when publishing</li>
+<li>eg. add <code>toc: true</code> to all notes published under the <code>iam.*</code> hierarchy</li>
+</ul>
+<pre class="language-yml"><code class="language-yml">  <span class="token key atrule">config</span><span class="token punctuation">:</span>
+    <span class="token key atrule">iam</span><span class="token punctuation">:</span> 
+        <span class="token key atrule">customFrontmatter</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token key atrule">key</span><span class="token punctuation">:</span> <span class="token string">"toc"</span><span class="token punctuation">,</span>
+            <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</div>    
+</div>
+</li>
+</ul>
+<ul>
+<li><strong>schema:</strong> add custom props from schema template (<a href="https://github.com/dendronhq/dendron/commit/52645449b8e155e168baaac0fa4e99903efafcf0">5264544</a>)</li>
+</ul>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.schema</span></div>
+<a href="https://dendron.so/notes/c5e5adde-5459-409b-b34d-a0d75cbb1052.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<p>Schema templates let you designate a note as a <strong>template</strong>. Newly created notes that match a schema with a template will have both the contents and custom frontmatter of the template note applied at creation.</p>
+<p>This is extremely useful whenever you want to re-use the outline of a note. Examples include daily journals, weekly shopping lists, and weekly reviews.  </p>
+<a href="https://www.loom.com/share/481b7ab051394c1caa383383bd265755"> 
+<img style="" src="https://cdn.loom.com/sessions/thumbnails/481b7ab051394c1caa383383bd265755-with-play.gif"> 
+</a>
+</div>    
+</div>
+<ul>
+<li><strong>workbench:</strong> reload index re-create root if not exist (<a href="https://github.com/dendronhq/dendron/commit/c66e242bac91c73404a5dd21ed3813c0dc2f022b">c66e242</a>)
+<ul>
+<li>dendron requires <code>root.md</code> and <code>root.schema.yml</code> to start indexing and would previously throw an error if these files were deleted</li>
+<li>this change will create these files within the vault instead of throwing said error</li>
+</ul>
+</li>
+</ul>
+<h3 id="bug-fixes-2"><a aria-hidden="true" class="anchor-heading" href="#bug-fixes-2"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bug Fixes</h3>
+<ul>
+<li><strong>comp:common-server:</strong> don't throw error on missing log vars (<a href="https://github.com/dendronhq/dendron/commit/9d00e55b2104efa7739ec94f0bb2793daa888450">9d00e55</a>)</li>
+<li><strong>notes:</strong> refactor will miss links in newly created notes (<a href="https://github.com/dendronhq/dendron/commit/c8a5dde2ca46e2402bc50b1a8f635d9fb5318c9d">c8a5dde</a>)</li>
+<li><strong>lookup:</strong> don't update lookup text unless a <em>note btn</em> is pressed (<a href="https://github.com/dendronhq/dendron/commit/30140f7a16c6fb5ab81a9eae8af13f17575c78f3">30140f7</a>)</li>
+<li><strong>workbench</strong>: Doctor command will create two <code>doc</code> directories if no <code>doc</code> directory is found (<a href="https://github.com/dendronhq/dendron/commit/43f7bfc9">43f7bfc9</a>) --> ( 🙏 thanks to <a href="https://github.com/bs">Britt</a> for the pull request)</li>
+</ul>
+<h3 id="house-cleaning"><a aria-hidden="true" class="anchor-heading" href="#house-cleaning"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>House Cleaning</h3>
+<h4 id="dendron-change-workspace-will-no-longer-create-a-workspace-if-no-workspace-exists"><a aria-hidden="true" class="anchor-heading" href="#dendron-change-workspace-will-no-longer-create-a-workspace-if-no-workspace-exists"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Dendron: Change Workspace will no longer create a workspace if no workspace exists</h4>
+<p>Previously, if you wanted to use an existing folder (aka vault) with a workspace, we recommended you run <code>Change Workspace</code> which would create a Dendron workspace <strong>inside</strong> the folder if it didn't exist. This turns out to be an anti-pattern that interferes with features like publishing which expect the workspace to be in a separate folder from its vaults.</p>
+<h2 id="0132-2020-10-22"><a aria-hidden="true" class="anchor-heading" href="#0132-2020-10-22"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://github.com/dendronhq/dendron/compare/v0.13.2-alpha.2...v0.13.2">0.13.2</a> (2020-10-22)</h2>
+<h3 id="features-3"><a aria-hidden="true" class="anchor-heading" href="#features-3"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Features</h3>
+<h4 id="pod-publishing"><a aria-hidden="true" class="anchor-heading" href="#pod-publishing"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pod Publishing</h4>
+<ul>
+<li><strong>pods:</strong> add publish pod cmd (<a href="https://github.com/dendronhq/dendron/commit/8947a60cbc2e76f00d214a1913952c58db86f2f1">8947a60</a>)</li>
+</ul>
+<p>In addition to <strong>import</strong> and <strong>export</strong>, you can now also <strong>publish</strong> notes with pods.</p>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.pod</span></div>
+<a href="https://dendron.so/notes/66727a39-d0a7-449b-a10d-f6c438185d7f.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<p>Publishing lets you take one note and output it into a different format/destination. </p>
+<p>For example, you might want to use our <a href="https://dendron.so/notes/727b1087-191a-4bef-a6d0-8c9ae190426d.html">markdown pod</a> to take a note with <a href="https://dendron.so/notes/f1af56bb-db27-47ae-8406-61a98de6c78c.html">note references</a> and publish it as a regular markdown note to use in a github issue or another tool.</p>
+<p>Future uses of the <strong>publish</strong> method will be taking a note and publishing it to social media (eg. twitter, facebook, linkedin), publishing it to Gmail, and publishing to destinations like Medium and dev.to.</p>
+</div>    
+</div>
+<h4 id="realtime-schema-validation"><a aria-hidden="true" class="anchor-heading" href="#realtime-schema-validation"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Realtime Schema Validation</h4>
+<ul>
+<li><strong>schemas:</strong> realtime schema validation (server mode) (<a href="https://github.com/dendronhq/dendron/commit/42191bcd">42191bcd</a>)</li>
+</ul>
+<p>You will now get a warning if you are trying to save a badly formatted schema.</p>
+<h3 id="enhancements-2"><a aria-hidden="true" class="anchor-heading" href="#enhancements-2"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Enhancements</h3>
+<ul>
+<li><strong>publishing:</strong> preserve abbreviations (<a href="https://github.com/dendronhq/dendron/commit/06d91912b34bc5f81b20fce77652366c501865ec">06d9191</a>) --> thank you <a href="https://github.com/LukeCarrier">Luke Carrier</a> for the pull request</li>
+<li><strong>pods:</strong> add json publish pod (<a href="https://github.com/dendronhq/dendron/commit/127dd7c02a0081b027e06c40d6189904c5da0694">127dd7c</a>)</li>
+<li><strong>pods:</strong> add markdown publish pod (<a href="https://github.com/dendronhq/dendron/commit/127dd7c02a0081b027e06c40d6189904c5da0694">127dd7c</a>)</li>
+<li><strong>pods:</strong> update placeholder text (<a href="https://github.com/dendronhq/dendron/commit/57a4af8887404c21d07b45a3a565516bf73cc944">57a4af8</a>)</li>
+<li><strong>refs:</strong> render error when ref doesn't exist (<a href="https://github.com/dendronhq/dendron/commit/ba1be1a12c4a1742e93ab4058d0f132b320be539">ba1be1a</a>)</li>
+</ul>
+<h3 id="breaking"><a aria-hidden="true" class="anchor-heading" href="#breaking"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Breaking</h3>
+<ul>
+<li><code>dendron.pod.file</code> has been renamed <code>dendron.markdown</code></li>
+<li><code>dendron.pod.json</code> has been renamed <code>dendron.json</code></li>
+</ul>
+<h3 id="documentation-updates"><a aria-hidden="true" class="anchor-heading" href="#documentation-updates"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Documentation Updates</h3>
+<h4 id="pods"><a aria-hidden="true" class="anchor-heading" href="#pods"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pods</h4>
+<p>Documentation for pods has been re-written to reflect recent changes with pods</p>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.pod</span></div>
+<a href="https://dendron.so/notes/66727a39-d0a7-449b-a10d-f6c438185d7f.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<h1 id="pods-1"><a aria-hidden="true" class="anchor-heading" href="#pods-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pods</h1>
+<img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/pods.png" height="300px">
+<blockquote>
+<p>Pod image courtesy of <a href="https://www.instagram.com/ilana_lin/">Ilana Lin</a></p>
+</blockquote>
+<p>Dendron refers to pods as any tool or location that is used to hold information. Tools like Evernote and Roam are pods. Social media services like Twitter and Facebook are pods. Publication destinations like static sites and Medium are pods. Everything is a pod.</p>
+<p>Pods let you do the following:</p>
+<ul>
+<li><strong>import</strong> your notes from any existing location into Dendron</li>
+<li><strong>export</strong> your notes from Dendron to any existing location</li>
+<li><strong>publish</strong> your notes from Dendron to any existing location</li>
+</ul>
+<p>To access pods, Dendron exposes three commands:</p>
+<ul>
+<li><code>Dendron: Import Pod</code>: imports notes </li>
+<li><code>Dendron: Export Pod</code>: export notes </li>
+<li><code>Dendron: Publish Pod</code>: publish notes </li>
+</ul>
+<p><strong>NOTE</strong>: not all pods will expose all three commands. Each pod implementation can choose to implement any subset of the three commands.</p>
+</div>    
+</div>
+<h2 id="0131-2020-10-21"><a aria-hidden="true" class="anchor-heading" href="#0131-2020-10-21"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://github.com/dendronhq/dendron/compare/v0.13.1-alpha.2...v0.13.1">0.13.1</a> (2020-10-21)</h2>
+<h3 id="features-4"><a aria-hidden="true" class="anchor-heading" href="#features-4"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Features</h3>
+<h4 id="generate-table-of-contents-when-publishing"><a aria-hidden="true" class="anchor-heading" href="#generate-table-of-contents-when-publishing"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Generate table of contents when Publishing</h4>
+<ul>
+<li><strong>publishing:</strong> generate toc when publishing (<a href="https://github.com/dendronhq/dendron/commit/53ee270c89f530b9224f33a28dc811de7e5cb2ad">53ee270</a>)</li>
+</ul>
+<div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">dendron.topic.publishing.configuration</span></div>
+<a href="https://dendron.so/notes/ffa6a4ba-5eda-48c7-add5-8e2333ba27b4.html" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div>        
+<h4 id="toc"><a aria-hidden="true" class="anchor-heading" href="#toc"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>toc</h4>
+<ul>
+<li>type: boolean</li>
+<li>default: false</li>
+</ul>
+<p>To generate a table of contents in a given note, enable this directive in the note frontmatter.</p>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre>
+<p>You will also need to include the following line somewhere in the note body. Dendron will generate a table of contents when it finds that particular header</p>
+<pre class="language-md"><code class="language-md"><span class="token title important"><span class="token punctuation">##</span> Table of Contents</span>
+</code></pre>
+<p>The output will look like the below.
+<img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/change.toc.jpg"></p>
+<ul>
+<li>NOTE: in order to generate a table of contents, the heading levels after ToC need to be at an equal level or greater than the heading level of <code>Table of Contents</code>
+<ul>
+<li>this is okay</li>
+</ul>
+<pre class="language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> Table of Contents</span>
+<span class="token title important"><span class="token punctuation">##</span> Header1</span>
+<span class="token title important"><span class="token punctuation">##</span> Header2</span>
+</code></pre>
+<ul>
+<li>this is not</li>
+</ul>
+<pre class="language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> Table of Contents</span>
+<span class="token title important"><span class="token punctuation">###</span> Header1</span>
+<span class="token title important"><span class="token punctuation">###</span> Header2</span>
+</code></pre>
+</li>
+</ul>
+</div>    
+</div>
+<ul>
+<li><strong>publishing:</strong> set frontmatter overrides globally when publishing (<a href="https://github.com/dendronhq/dendron/commit/782d6374c55b00bcda36da9149fb2cedeac0c3d9">782d637</a>)</li>
+</ul>
+<h3 id="enhancements-3"><a aria-hidden="true" class="anchor-heading" href="#enhancements-3"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Enhancements</h3>
+<ul>
+<li><strong>lookup:</strong> add contrast btw note/schema lookup (<a href="https://github.com/dendronhq/dendron/commit/4faec8e4548a80eb56469c46efadd608c26e0230">4faec8e</a>)
+<img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/change.lookup-note.jpg">
+<img src="https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/change.lookup-schema.jpg"></li>
+</ul>
+<h3 id="bug-fixes-3"><a aria-hidden="true" class="anchor-heading" href="#bug-fixes-3"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bug Fixes</h3>
+<ul>
+<li><strong>publish:</strong> issues with Publish command in server mode (<a href="https://github.com/dendronhq/dendron/commit/7f3789a88a01465cca30efe3b3d261bf89a100df">7f3789a</a>)</li>
+<li><strong>lookup:</strong> re-enable schema suggestions on namespace (<a href="https://github.com/dendronhq/dendron/commit/56ee6c460dd562200931381923e72971681d1390">56ee6c4</a>)</li>
+<li><strong>workbench:</strong> reload index will update tree view (<a href="https://github.com/dendronhq/dendron/commit/deadedc30358ee668806434196ddd45b74aff0cc">deadedc</a>)</li>
+<li><strong>lookup:</strong> display schema id if title undefined (<a href="https://github.com/dendronhq/dendron/commit/6c7cc70cf85181b11654074e17672e39a44fb874">6c7cc70</a>)</li>
+<li><strong>seeds:</strong> update replace merge strategy to really replace (<a href="https://github.com/dendronhq/dendron/commit/a02e08a753c0603871a1ff76e6de78906a04b056">a02e08a</a>)</li>
+</ul>
+</div>    
+</div><p></p><p></p><span id="navId" data="98ad9b6b-53f3-4883-939e-e14055f2cac7"></span>
+
+
+
+                
+      </section>
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+        
+          <hr>
+          <footer>
+            
+            
+
+            
+              <div class="d-flex mt-2">
+                
+                
+                  <p class="text-small text-grey-dk-000 mb-0">
+                    <a href="https://github.com/dendronhq/dendron-site/edit/master/vault/dendron.release.2020-11-01.md" id="edit-this-page">Edit this page on GitHub</a>
+                  </p>
+                
+              </div>
+            
+          </footer>
+        
+    </div>
+</div>
+
+
+  
+
+  <div class="search-overlay"></div>
+
+</div>
+</body>
+</html>
